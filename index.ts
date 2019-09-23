@@ -1,18 +1,20 @@
 import { createHttpServer } from './src/app'
-
 import { Environment } from './src/config/environments'
+import { getLocalIP, log } from './src/helpers'
 
-module.exports = (async () => {
+module.exports = (() => {
   try {
-    const app = await createHttpServer()
-
-    const server = app.listen(Environment.port, () => {
-      console.log(
-        `Server is listening on ${Environment.port}, in ${Environment.identity} mode!`
+    createHttpServer().listen(Environment.port, () =>
+      log(
+        `\n     Server is listening on ${getLocalIP()}:${
+          Environment.port
+        }, in ${Environment.identity} mode. \n`,
+        'cyan'
       )
-    })
+    )
   } catch (e) {
     console.log(e)
+
     process.exit(1)
   }
 })()

@@ -1,17 +1,17 @@
-const chalk = require('chalk')
+import { log } from '../helpers'
 
-const log = (txt: string, color: string = 'green'): void => console.log(chalk[color](txt))
-
-const logger = (): any =>  {
+const logger = (): any => {
   return async (ctx, next) => {
     const start = Date.now()
 
     await next()
 
-    const responseTime = (Date.now() - start)
+    const responseTime = Date.now() - start
 
-    log(`${ctx['method']}: ${ctx['url']}`)
-    log(`response: ${responseTime / 1000}s from device: ${ctx['header']['user-agent']}`)
+    log(`${ctx.method} ${ctx.host}${ctx.url}`)
+    log(`Status ${ctx.response.status}`)
+    log(`Response time: ${responseTime}ms`)
+    log(`Device ${ctx.header['user-agent']}`, 'white')
     log('\n')
   }
 }

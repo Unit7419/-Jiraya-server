@@ -18,7 +18,7 @@ const logMiddleware = require('./middleware/requestLog')
 
 useContainer(Container)
 
-export const createHttpServer = async () => {
+export const createHttpServer = () => {
   const koa = new Koa()
 
   koa.use(logMiddleware)
