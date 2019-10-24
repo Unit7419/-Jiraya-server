@@ -314,61 +314,6 @@ module.exports = encodeURIComponent(`<div id="highlighter_318346" class="syntaxh
             <code class="keyword">ul</code>
             <code class="plain">></code>
           </div>
-          <div class="line number57 index56 alt2">&nbsp;</div>
-          <div class="line number58 index57 alt1">&nbsp;</div>
-          <div class="line number59 index58 alt2">
-            <code class="undefined spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code>
-            <code class="plain">&lt;</code>
-            <code class="keyword">ul</code> <code class="color1">id</code>
-            <code class="plain">=</code>
-            <code class="string">"applications"</code>
-            <code class="plain">></code>
-          </div>
-          <div class="line number64 index63 alt1">&nbsp;</div>
-          <div class="line number69 index68 alt2">
-            <code class="undefined spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code>
-            <code class="plain">&lt;/</code>
-            <code class="keyword">ul</code>
-            <code class="plain">></code>
-          </div>
-          <div class="line number70 index69 alt1">&nbsp;</div>
-          <div class="line number71 index70 alt2">&nbsp;</div>
-          <div class="line number72 index71 alt1">
-            <code class="undefined spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code>
-            <code class="plain">&lt;</code>
-            <code class="keyword">ul</code> <code class="color1">id</code>
-            <code class="plain">=</code>
-            <code class="string">"contributions"</code>
-            <code class="plain">></code>
-          </div>
-          <div class="line number78 index77 alt1">&nbsp;</div>
-          <div class="line number84 index83 alt1">&nbsp;</div>
-          <div class="line number90 index89 alt1">
-            <code class="undefined spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code>
-            <code class="plain">&lt;/</code>
-            <code class="keyword">ul</code>
-            <code class="plain">></code>
-          </div>
-          <div class="line number91 index90 alt2">&nbsp;</div>
-          <div class="line number92 index91 alt1">&nbsp;</div>
-          <div class="line number93 index92 alt2">
-            <code class="undefined spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code>
-            <code class="plain">&lt;</code>
-            <code class="keyword">ul</code> <code class="color1">id</code>
-            <code class="plain">=</code>
-            <code class="string">"articles"</code>
-            <code class="plain">></code>
-          </div>
-          <div class="line number98 index97 alt1">&nbsp;</div>
-          <div class="line number103 index102 alt2">&nbsp;</div>
-          <div class="line number108 index107 alt1">
-            <code class="undefined spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code>
-            <code class="plain">&lt;/</code>
-            <code class="keyword">ul</code>
-            <code class="plain">></code>
-          </div>
-          <div class="line number109 index108 alt2">&nbsp;</div>
-          <div class="line number110 index109 alt1">&nbsp;</div>
           <div class="line number111 index110 alt2">
             <code class="undefined spaces">&nbsp;&nbsp;</code>
             <code class="plain">&lt;/</code>
