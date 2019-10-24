@@ -4,7 +4,7 @@ import { Post, Get, JsonController } from 'routing-controllers'
 export class APIController {
   constructor() {}
 
-  @Post('/secret/html')
+  @Get('/secret/html')
   getSecretHtml() {
     return require('./../db/secretHtml.js')
   }
