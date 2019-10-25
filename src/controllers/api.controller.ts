@@ -6,7 +6,7 @@ export class APIController {
 
   @Get('/secret/html')
   getSecretHtml() {
-    return require('./../db/secretHtml.js')
+    return require('./../db/secretHtml.ts')
   }
 
   @Get('/test')
