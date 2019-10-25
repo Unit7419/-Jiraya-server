@@ -50,6 +50,12 @@ module.exports = encodeURIComponent(`<div id="highlighter_318346" class="syntaxh
             <code class="keyword">article</code>
             <code class="plain">></code>
           </div>
+
+
+
+
+          <!-- accounts start-->
+
           <div class="line number8 index7 alt1">
             <code class="undefined spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code>
             <code class="plain">&lt;</code>
@@ -83,8 +89,11 @@ module.exports = encodeURIComponent(`<div id="highlighter_318346" class="syntaxh
             <code class="plain">></code>
           </div>
 
+          <!-- header end-->
 
 
+
+          <!-- accounts start-->
 
           <div class="line number14 index13 alt1">
             <code class="undefined spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code>
@@ -193,10 +202,19 @@ module.exports = encodeURIComponent(`<div id="highlighter_318346" class="syntaxh
             <code class="plain">></code>
           </div>
 
+          <!-- accounts end-->
+
+
+
+
+          <!-- blank start-->
+          <div class="line number21 index20 alt2">&nbsp;</div>
+          <!-- blank end-->
+
+
 
 
           <!-- site start-->
-
 
           <div class="line number21 index20 alt2">
             <code class="undefined spaces">
@@ -242,8 +260,14 @@ module.exports = encodeURIComponent(`<div id="highlighter_318346" class="syntaxh
 
 
 
+          <!-- blank start-->
+          <div class="line number21 index20 alt2">&nbsp;</div>
+          <!-- blank end-->
 
 
+
+
+          <!-- footer start-->
 
           <div class="line number111 index110 alt2">
             <code class="undefined spaces">&nbsp;&nbsp;</code>
@@ -261,6 +285,8 @@ module.exports = encodeURIComponent(`<div id="highlighter_318346" class="syntaxh
             <code class="keyword">html</code>
             <code class="plain">></code>
           </div>
+
+          <!-- footer end-->
         </div>
       </td>
     </tr>
