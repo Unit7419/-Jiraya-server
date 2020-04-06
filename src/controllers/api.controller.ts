@@ -4,6 +4,11 @@ import { Post, Get, JsonController } from 'routing-controllers'
 export class APIController {
   constructor() {}
 
+  @Post('/justwink/message_board')
+  justwink_message_board() {
+    return require('./../db/justwink.message.board.ts')
+  }
+
   @Get('/secret/html')
   getSecretHtml() {
     return require('./../db/secretHtml.ts')
