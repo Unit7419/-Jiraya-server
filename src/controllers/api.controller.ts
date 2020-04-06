@@ -1,4 +1,5 @@
 import { Post, Get, JsonController } from 'routing-controllers'
+import {justwinkMessageGet, justwinkMessageSet} from '../model/model'
 
 @JsonController()
 export class APIController {
@@ -6,7 +7,12 @@ export class APIController {
 
   @Post('/justwink/message_board')
   justwink_message_board() {
-    return require('./../db/justwink.message.board.ts')
+    return justwinkMessageGet()
+  }
+
+  @Post('/justwink/comment')
+  justwink_comment(data) {
+    return justwinkMessageSet(data)
   }
 
   @Get('/secret/html')
