@@ -130,7 +130,7 @@ module.exports = encodeURIComponent(`<div id="highlighter_318346" class="syntaxh
                     <code class="keyword">a</code> <code class="color1">href</code>
                     <code class="plain">=</code>
                     <code class="string">
-                      "<a href="https://github.com/rollawaypoint">https://github.com/rollawaypoint</a>"
+                      "<a href="https://github.com/justwink">https://github.com/justwink</a>"
                     </code>
                     <code class="plain">>github&lt;/</code>
                     <code class="keyword">a</code>
@@ -242,7 +242,7 @@ module.exports = encodeURIComponent(`<div id="highlighter_318346" class="syntaxh
                 <code class="color1">href</code>
                 <code class="plain">=</code>
                 <code class="string">
-                  "<a href="https://rollawaypoint.github.io">https://rollawaypoint.github.io/</a>"
+                  "<a href="https://justwink.cn">https://justwink.cn/</a>"
                 </code>
                 <code class="plain">>blog&lt;/</code>
                 <code class="keyword">a</code>
