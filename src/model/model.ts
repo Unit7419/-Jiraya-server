@@ -1,4 +1,4 @@
-const { read_photos } = require('../utils/images.js')
+const { read_photos, write_photos } = require('../utils/images.js')
 const justwinkDB = require('../db/justwink.message.board')
 const MAX = 10000
 
@@ -16,4 +16,8 @@ export const justwinkMessageSet = data => {
 
 export const getGallery = () => {
   return read_photos()
+}
+
+export const putGallery = body => {
+  return write_photos(body)
 }

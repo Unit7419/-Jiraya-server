@@ -1,0 +1,10 @@
+{
+  "apps": [
+    {
+      "name": "jiraya",
+      "script": "node ./jiraya.js",
+      "watch": "./",
+      "log_date_format": "YYYY-MM-DD HH:mm Z"
+    }
+  ]
+}
