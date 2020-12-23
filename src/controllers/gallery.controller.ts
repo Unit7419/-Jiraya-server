@@ -1,4 +1,5 @@
 import { Post, JsonController } from 'routing-controllers'
+import { getGallery } from '../model/model'
 
 @JsonController()
 export class GalleryController {
@@ -6,6 +7,6 @@ export class GalleryController {
 
   @Post('/gallery/photos')
   gallery_photos() {
-    return []
+    return getGallery()
   }
 }
