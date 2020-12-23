@@ -30,6 +30,9 @@ module.exports.write_photos = ({ base64, name }) => {
       })
     }
   } catch (e) {
-    return []
+    return {
+      code: 500,
+      msg: e,
+    }
   }
 }
