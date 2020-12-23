@@ -13,7 +13,7 @@ module.exports.write_photos = params => {
   const { base64, name } = params || {}
 
   try {
-    const path = `./${name}.jpg`
+    const path = `/root/christian/7419-images/photos/${name}.jpg`
     const buffer = Buffer.from(base64.replace(/^ *data:image\/\w+;base64,/, ''), 'base64')
 
     fs.writeFileSync(path, buffer)
@@ -22,6 +22,6 @@ module.exports.write_photos = params => {
       msg: 'success',
     }
   } catch (e) {
-    return `try!, ${JSON.stringify(e)} ${name} ${base64}`
+    return `Error: ${JSON.stringify(e)} ${name} ${base64}`
   }
 }
