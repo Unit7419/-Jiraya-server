@@ -1,5 +1,4 @@
-import { read_photos } from '../utils/images.js'
-
+const { read_photos } = require('../utils/images.js')
 const justwinkDB = require('../db/justwink.message.board')
 const MAX = 10000
 
