@@ -13,6 +13,7 @@ import * as cors from 'koa2-cors'
 import { Container } from 'typedi'
 
 import { APIController } from './controllers/api.controller'
+import { GalleryController } from './controllers/gallery.controller'
 
 const logMiddleware = require('./middleware/requestLog')
 
@@ -29,9 +30,9 @@ export const createHttpServer = () => {
 
   useKoaServer(koa, {
     routePrefix: '/api',
-    controllers: [APIController],
+    controllers: [APIController, GalleryController],
     classTransformer: false,
-    development: Environment.identity === 'development'
+    development: Environment.identity === 'development',
   })
 
   return koa

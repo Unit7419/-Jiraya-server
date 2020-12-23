@@ -1,6 +1,7 @@
+const fs = require('fs')
+const justwinkDB = require('../db/justwink.message.board')
 const MAX = 10000
 
-const justwinkDB = require('../db/justwink.message.board')
 
 export const justwinkMessageGet = () => justwinkDB
 
@@ -12,4 +13,8 @@ export const justwinkMessageSet= data => {
   justwinkDB.push(data)
 
   return justwinkDB
+}
+
+export const getGallery = () => {
+  return 'http://47.100.219.10:7001/images/avatar.jpg'
 }

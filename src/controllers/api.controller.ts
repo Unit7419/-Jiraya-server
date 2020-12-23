@@ -1,5 +1,5 @@
 import { Post, Get, JsonController, Body } from 'routing-controllers'
-import {justwinkMessageGet, justwinkMessageSet} from '../model/model'
+import { justwinkMessageGet, justwinkMessageSet } from '../model/model'
 
 @JsonController()
 export class APIController {
