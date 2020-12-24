@@ -1,7 +1,13 @@
 const response = (): any => {
   return async (ctx, next) => {
-    await next()
-    ctx.set('Content-Type', 'application/json')
+    try {
+      ctx.set('Content-Type', 'application/json')
+      await next()
+    } catch (e) {
+      ctx.body = {
+        msg: e,
+      }
+    }
   }
 }
 
