@@ -16,6 +16,7 @@ import { APIController } from './controllers/api.controller'
 import { GalleryController } from './controllers/gallery.controller'
 
 const logMiddleware = require('./middleware/requestLog')
+const response = require('./middleware/response')
 
 useContainer(Container)
 
@@ -23,6 +24,7 @@ export const createHttpServer = () => {
   const koa = new Koa()
 
   koa.use(logMiddleware)
+  koa.use(response)
 
   if (Environment.identity !== 'production') koa.use(json())
 
