@@ -1,5 +1,6 @@
 import { Get, Post, Body, JsonController } from 'routing-controllers'
-import { getGallery, putGallery } from '../model/model'
+
+const { read_photos, write_photos } = require('../service/images.js')
 
 @JsonController()
 export class GalleryController {
@@ -7,10 +8,10 @@ export class GalleryController {
 
   @Get('/gallery/photos')
   gallery_photos() {
-    return getGallery()
+    return read_photos()
   }
   @Post('/gallery/upload')
   upload_photos(@Body() body) {
-    return putGallery(body)
+    return write_photos(body)
   }
 }
