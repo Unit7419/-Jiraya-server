@@ -1,6 +1,6 @@
-import { createHttpServer } from './src/app'
-import { Environment } from './src/config/environments'
-import { getLocalIP, log } from './src/helpers'
+import { createHttpServer } from './app'
+import { Environment } from './config/environments'
+import { getLocalIP, log } from './helpers'
 
 module.exports = (() => {
   try {

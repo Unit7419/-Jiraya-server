@@ -1,4 +1,4 @@
-import { log } from '../../helpers'
+import { log } from '../helpers'
 
 const logger = (): any => {
   return async (ctx, next) => {
@@ -16,4 +16,6 @@ const logger = (): any => {
   }
 }
 
-module.exports = logger()
+module.exports = app => {
+  app.use(logger())
+}
