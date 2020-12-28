@@ -21,12 +21,12 @@ module.exports = {
           }
 
           await write_photos({ file: files.file, name: fields.name })
+
+          ctx.response.body = { msg: 'Success', file: files.file, name: fields.name }
         } catch (msg) {
           ctx.response.body = { msg }
         }
       })
-
-      ctx.response.body = { msg: 'Success' }
     } catch (msg) {
       ctx.response.body = { msg }
     }
