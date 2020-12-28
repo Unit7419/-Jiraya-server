@@ -11,20 +11,24 @@ module.exports = {
   upload_photos: async (ctx, next) => {
     await next()
 
-    const form = new formidable.IncomingForm()
+    try {
+      const form = new formidable.IncomingForm()
 
-    await form.parse(ctx.req, async function (err, fields, files) {
-      try {
-        if (err) {
-          ctx.response.body = { msg: err }
+      await form.parse(ctx.req, async function (err, fields, files) {
+        try {
+          if (err) {
+            ctx.response.body = { msg: err }
+          }
+
+          await write_photos({ file: files.file, name: fields.name })
+        } catch (msg) {
+          ctx.response.body = { msg }
         }
+      })
 
-        await write_photos({ file: files.file, name: fields.name })
-      } catch (msg) {
-        ctx.response.body = { msg }
-      }
-    })
-
-    ctx.response.body = { msg: 'Success' }
+      ctx.response.body = { msg: 'Success' }
+    } catch (msg) {
+      ctx.response.body = { msg }
+    }
   },
 }
