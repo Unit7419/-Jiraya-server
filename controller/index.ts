@@ -1,28 +1,30 @@
-// import getRawBody from 'raw-body'
-const getRawBody = require('raw-body')
-
+const fs = require('fs')
+const formidable = require('formidable')
 const { read_photos, write_photos } = require('../service/images')
 
 module.exports = {
-  get_photos: ctx => {
+  get_photos: async (ctx, next) => {
+    await next()
     ctx.response.body = read_photos()
   },
 
   upload_photos: async (ctx, next) => {
-    const file = await getRawBody(ctx.req)
+    await next()
 
-    const bufferStream = require('stream').PassThrough()
-    const writeStream = fs.createWriteStream(`./file.jpg`)
-    bufferStream.end(file)
-    bufferStream.pipe(writeStream)
+    const form = new formidable.IncomingForm()
 
-    require('fs').writeFileSync('./a.jpg', file)
-    try {
-      write_photos(file)
+    await form.parse(ctx.req, async function (err, fields, files) {
+      try {
+        if (err) {
+          ctx.response.body = { msg: err }
+        }
 
-      ctx.response.body = { msg: 'Success' }
-    } catch (msg) {
-      ctx.response.body = { msg }
-    }
+        await write_photos({ file: files.file, name: fields.name })
+      } catch (msg) {
+        ctx.response.body = { msg }
+      }
+    })
+
+    ctx.response.body = { msg: 'Success' }
   },
 }

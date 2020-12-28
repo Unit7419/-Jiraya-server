@@ -1,5 +1,6 @@
 const router = require('koa-router')()
 const Controller = require('../controller')
+const koaBody = require('koa-body')
 
 module.exports = app => {
   app.use(router.routes())
