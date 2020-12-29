@@ -1,11 +1,13 @@
-const router = require('koa-router')()
-const Controller = require('../controller')
+const router = require('koa-router')({
+  prefix: '/api',
+})
 const koaBody = require('koa-body')
+
+const galleryRouter = require('./gallery')
 
 module.exports = app => {
   app.use(router.routes())
   app.use(router.allowedMethods())
 
-  router.get('/api/gallery/photos', Controller.get_photos)
-  router.post('/api/gallery/upload', Controller.upload_photos)
+  galleryRouter(router)
 }

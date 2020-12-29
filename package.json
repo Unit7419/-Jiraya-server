@@ -5,6 +5,7 @@
   "scripts": {
     "dev": "./node_modules/.bin/nodemon index.ts",
     "start": "NODE_ENV=production ts-node index.ts",
+    "local": "./node_modules/.bin/nodemon ./jiraya-test.js",
     "test": "./node_modules/.bin/mocha",
     "build": "tsc"
   },
