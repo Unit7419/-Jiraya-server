@@ -1,5 +1,7 @@
 const fs = require('fs')
+const { promisify } = require('util')
 const formidable = require('formidable')
+const sizeOf = promisify(require('image-size'))
 
 const dir =
   process.env.NODE_ENV === 'localhost'
@@ -18,12 +20,23 @@ module.exports.read_photos = () => {
   }
 }
 
-module.exports.write_photos = params => {
+module.exports.write_photos = async params => {
   const { file, name } = params || {}
-  const path = `${dir}/${name}.jpg`
+  const path = `${dir}/${name}`
 
   const buffer = fs.readFileSync(file.path)
   fs.writeFileSync(path, buffer)
+
+  return { dir, name, path }
+}
+
+module.exports.rename_photos = async ({ dir, name, path }) => {
+  const { width, height, type } = await sizeOf(path)
+  const temp = name.split('.')
+  temp.pop()
+  const real = `${temp.join('.')}&wh=${width}*${height}`
+
+  fs.rename(path, `${dir}/${real}.${type}`, e => console.log('修改完毕'))
 }
 
 module.exports.solveImageBlob = ctx =>

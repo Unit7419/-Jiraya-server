@@ -1,5 +1,5 @@
 const fs = require('fs')
-const { read_photos, write_photos, solveImageBlob } = require('../service/images')
+const { read_photos, write_photos, rename_photos, solveImageBlob } = require('../service/images')
 
 module.exports = {
   get_photos: async (ctx, next) => {
@@ -11,7 +11,7 @@ module.exports = {
     await next()
 
     try {
-      await write_photos(await solveImageBlob(ctx))
+      await rename_photos(await write_photos(await solveImageBlob(ctx)))
       ctx.response.body = { msg: 'Success!' }
     } catch (msg) {
       ctx.response.body = { msg }
