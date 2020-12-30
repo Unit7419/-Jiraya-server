@@ -7,7 +7,7 @@
       "name": "Jiraya-server",
       "skipFiles": ["<node_internals>/**"],
       "env": {
-        "NODE_ENV": "development"
+        "NODE_ENV": "local"
       },
       "program": "${workspaceFolder}/jiraya-test.js"
     }
